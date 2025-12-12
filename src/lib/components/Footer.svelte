@@ -2,68 +2,68 @@
     const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="bg-white pt-24 pb-12">
+<footer class="bg-black pt-24 pb-12 border-t border-gray-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <!-- Top Section -->
         <div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
             <div class="max-w-xl">
                 <div class="mb-8">
-                    <!-- Logo mark -->
-                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 4H10V10H4V4Z" stroke="black" stroke-width="2"/>
-                        <path d="M14 14H20V20H14V14Z" stroke="black" stroke-width="2"/>
-                    </svg>
+                    <!-- Logo -->
+                    <div class="flex items-center gap-1">
+                        <span class="text-2xl font-bold tracking-tight font-mono text-white">THESIS</span>
+                        <span class="text-2xl font-bold text-primary-500 animate-pulse">_</span>
+                    </div>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-serif text-gray-900 leading-tight">
-                    Unlock Financial AI<br />For Your Firm
+                <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                    Stop Investing Alone.<br />
+                    <span class="text-gray-500">Join the Waitlist.</span>
                 </h2>
             </div>
             <div>
-                <a href="#demo" class="rounded-full bg-black px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 transition-colors inline-block">
-                    Request Demo
+                <a href="#waitlist" class="rounded-md bg-primary-600 px-6 py-3 text-sm font-medium text-black hover:bg-primary-500 transition-colors inline-block font-mono">
+                    Request Access
                 </a>
             </div>
         </div>
 
         <!-- Links Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 border-t border-gray-100 pt-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 border-t border-gray-800 pt-16">
             <div>
-                <h4 class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-6">Overview</h4>
+                <h4 class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-6">Product</h4>
                 <ul class="space-y-4">
-                    <li><a href="#product" class="text-xs text-gray-600 hover:text-gray-900">Product</a></li>
-                    <li><a href="#features" class="text-xs text-gray-600 hover:text-gray-900">Features</a></li>
-                    <li><a href="#security" class="text-xs text-gray-600 hover:text-gray-900">Security</a></li>
+                    <li><a href="#product" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Features</a></li>
+                    <li><a href="#security" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Security</a></li>
+                    <li><a href="#waitlist" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Join Waitlist</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-6">Company</h4>
                 <ul class="space-y-4">
-                    <li><a href="#about" class="text-xs text-gray-600 hover:text-gray-900">About</a></li>
-                    <li><a href="#careers" class="text-xs text-gray-600 hover:text-gray-900">Careers</a></li>
+                    <li><a href="#about" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">About</a></li>
+                    <li><a href="#team" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Team</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-6">Legal</h4>
                 <ul class="space-y-4">
-                    <li><a href="#terms" class="text-xs text-gray-600 hover:text-gray-900">Terms of Use</a></li>
-                    <li><a href="#privacy" class="text-xs text-gray-600 hover:text-gray-900">Privacy Policy</a></li>
+                    <li><a href="#terms" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Terms of Use</a></li>
+                    <li><a href="#privacy" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Privacy Policy</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-6">Contact</h4>
+                <h4 class="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-6">Connect</h4>
                 <ul class="space-y-4">
-                    <li><a href="#demo" class="text-xs text-gray-600 hover:text-gray-900">Request Demo</a></li>
-                    <li><a href="#sales" class="text-xs text-gray-600 hover:text-gray-900">Sales</a></li>
-                    <li><a href="#linkedin" class="text-xs text-gray-600 hover:text-gray-900">LinkedIn</a></li>
-                    <li><a href="#press" class="text-xs text-gray-600 hover:text-gray-900">Press</a></li>
+                    <li><a href="#twitter" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Twitter</a></li>
+                    <li><a href="#linkedin" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">LinkedIn</a></li>
+                    <li><a href="#contact" class="text-xs text-gray-400 hover:text-primary-500 transition-colors">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Copyright -->
-        <div class="text-center border-t border-gray-100 pt-8">
-            <p class="text-[10px] font-mono uppercase tracking-widest text-gray-400">
-                © {currentYear} Rogo AI
+        <div class="text-center border-t border-gray-800 pt-8">
+            <p class="text-[10px] font-mono uppercase tracking-widest text-gray-600">
+                © {currentYear} Thesis • Launching Q1 2026
             </p>
         </div>
     </div>

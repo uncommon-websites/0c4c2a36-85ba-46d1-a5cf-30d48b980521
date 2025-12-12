@@ -2,82 +2,75 @@
     import { Lock, Shield, Eye, FileCheck } from 'lucide-svelte';
 </script>
 
-<section class="bg-[#111111] text-white py-24">
+<section class="bg-gray-950 text-white py-24 border-t border-gray-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <!-- Left Content -->
             <div class="flex flex-col justify-center">
                 <div class="flex items-center gap-2 mb-8">
-                    <Lock size={16} class="text-white" />
-                    <span class="text-xs font-mono uppercase tracking-widest text-gray-400">Security</span>
+                    <Lock size={16} class="text-primary-500" />
+                    <span class="text-xs font-mono uppercase tracking-widest text-gray-400">Security First</span>
                 </div>
 
-                <h2 class="text-4xl md:text-5xl font-serif mb-2">Built for Enterprise</h2>
-                <h2 class="text-4xl md:text-5xl font-serif mb-12">Secure by Design</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-2">Bank-Level Security</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-500 mb-12">For Your Portfolio</h2>
 
                 <div class="space-y-4 mb-12">
                     <div class="flex items-center gap-3">
-                        <Lock size={16} class="text-gray-400" />
-                        <span class="text-sm font-medium">No training on your data</span>
+                        <Lock size={16} class="text-primary-500" />
+                        <span class="text-sm font-medium">Read-only broker access (no trade execution)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <Shield size={16} class="text-gray-400" />
-                        <span class="text-sm font-medium">Modern & secure data practices</span>
+                        <Shield size={16} class="text-primary-500" />
+                        <span class="text-sm font-medium">Bank-level encryption standards</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <Eye size={16} class="text-gray-400" />
-                        <span class="text-sm font-medium">End to end encryption</span>
+                        <Eye size={16} class="text-primary-500" />
+                        <span class="text-sm font-medium">No data training or sharing</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <FileCheck size={16} class="text-gray-400" />
-                        <span class="text-sm font-medium">Audited & tested</span>
+                        <FileCheck size={16} class="text-primary-500" />
+                        <span class="text-sm font-medium">SOC 2 compliant infrastructure</span>
                     </div>
                 </div>
 
-                <a href="#security" class="inline-flex items-center text-sm font-medium text-white hover:text-gray-300 transition-colors">
-                    Find out more <span class="ml-2">↗</span>
+                <a href="#security" class="inline-flex items-center text-sm font-medium text-primary-500 hover:text-primary-400 transition-colors font-mono">
+                    Security details <span class="ml-2">→</span>
                 </a>
             </div>
 
-            <!-- Right Content: Certifications Grid -->
-            <div class="grid grid-cols-2 border-t border-l border-gray-800">
-                <!-- SOC2 -->
-                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group">
-                    <div class="h-24 w-24 rounded-full border-2 border-gray-600 flex items-center justify-center mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
-                        <div class="text-center">
-                            <div class="text-[10px] font-bold">AICPA</div>
-                            <div class="text-lg font-bold">SOC 2</div>
-                        </div>
+            <!-- Right Content: Security Features Grid -->
+            <div class="grid grid-cols-2 border border-gray-800 rounded-lg overflow-hidden">
+                <!-- Read-Only Access -->
+                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group bg-black hover:bg-gray-900 transition-colors">
+                    <div class="h-20 w-20 rounded border-2 border-primary-500/30 flex items-center justify-center mb-4 group-hover:border-primary-500 transition-colors">
+                        <Lock size={32} class="text-primary-500" />
                     </div>
-                    <span class="absolute bottom-4 left-4 text-[10px] text-gray-500 font-mono">SOC2</span>
+                    <span class="text-xs text-gray-400 font-mono text-center">Read-Only<br/>Access</span>
                 </div>
 
-                <!-- CCPA -->
-                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="h-20 w-20 text-gray-400 opacity-70 group-hover:opacity-100 transition-opacity">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
-                    <span class="absolute bottom-4 left-4 text-[10px] text-gray-500 font-mono">CCPA</span>
+                <!-- Encryption -->
+                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group bg-black hover:bg-gray-900 transition-colors">
+                    <div class="h-20 w-20 rounded border-2 border-primary-500/30 flex items-center justify-center mb-4 group-hover:border-primary-500 transition-colors">
+                        <Shield size={32} class="text-primary-500" />
+                    </div>
+                    <span class="text-xs text-gray-400 font-mono text-center">Bank-Level<br/>Encryption</span>
                 </div>
 
-                <!-- ISO 27001 -->
-                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group">
-                    <div class="h-24 w-24 rounded-full border-2 border-gray-600 flex items-center justify-center mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
-                         <div class="text-center">
-                            <div class="text-2xl font-bold">ISO</div>
-                        </div>
+                <!-- No Training -->
+                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group bg-black hover:bg-gray-900 transition-colors">
+                    <div class="h-20 w-20 rounded border-2 border-primary-500/30 flex items-center justify-center mb-4 group-hover:border-primary-500 transition-colors">
+                        <Eye size={32} class="text-primary-500" />
                     </div>
-                    <span class="absolute bottom-4 left-4 text-[10px] text-gray-500 font-mono">ISO 27001</span>
+                    <span class="text-xs text-gray-400 font-mono text-center">No Data<br/>Training</span>
                 </div>
 
-                <!-- GDPR -->
-                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group">
-                    <div class="relative h-20 w-20 opacity-70 group-hover:opacity-100 transition-opacity">
-                        {#each [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330] as deg}
-                            <div class="absolute top-1/2 left-1/2 h-1 w-1 bg-gray-400 rounded-full" style="transform: translate(-50%, -50%) rotate({deg}deg) translate(30px)"></div>
-                        {/each}
+                <!-- SOC 2 -->
+                <div class="aspect-square border-r border-b border-gray-800 flex flex-col items-center justify-center p-8 relative group bg-black hover:bg-gray-900 transition-colors">
+                    <div class="h-20 w-20 rounded border-2 border-primary-500/30 flex items-center justify-center mb-4 group-hover:border-primary-500 transition-colors">
+                        <FileCheck size={32} class="text-primary-500" />
                     </div>
-                    <span class="absolute bottom-4 left-4 text-[10px] text-gray-500 font-mono">GDPR</span>
+                    <span class="text-xs text-gray-400 font-mono text-center">SOC 2<br/>Compliant</span>
                 </div>
             </div>
         </div>

@@ -1,129 +1,163 @@
 <script>
-    // Icons replaced with CSS shapes for pixel-perfect custom visuals
+    import { Link, Activity, MessageSquare, TrendingUp, Bell, BarChart3 } from 'lucide-svelte';
 </script>
 
-<section class="py-24 bg-white">
+<section class="py-24 bg-black">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-16">
-            <h2 class="text-4xl md:text-5xl font-serif text-gray-900 leading-tight">
-                AI That Learns How Your<br />Firm Thinks and Works
+            <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                Built for Traders,<br />
+                <span class="text-gray-500">By Traders</span>
             </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Integrations -->
-            <div class="bg-gray-50 p-8 rounded-lg flex flex-col h-full">
-                <h3 class="text-lg font-serif text-gray-900 mb-8">Integrations</h3>
+            <!-- Broker Integrations -->
+            <div class="bg-gray-950 border border-gray-800 p-8 rounded-lg flex flex-col h-full hover:border-primary-500/50 transition-colors">
+                <div class="mb-4">
+                    <Link size={24} class="text-primary-500" />
+                </div>
+                <h3 class="text-lg font-bold text-white mb-4">Broker Integrations</h3>
                 <div class="flex-1 flex items-center justify-center mb-8">
-                    <div class="grid grid-cols-3 gap-4">
-                        {#each [1, 2, 3, 4, 5, 6] as i}
-                            <div class="h-10 w-10 bg-white rounded-full shadow-sm flex items-center justify-center text-gray-400">
-                                <div class="h-4 w-4 bg-gray-200 rounded-sm"></div>
+                    <div class="grid grid-cols-3 gap-3">
+                        {#each ['C', 'K', 'F', 'R', 'S', 'J'] as broker}
+                            <div class="h-12 w-12 bg-gray-900 border border-gray-700 rounded flex items-center justify-center text-gray-400 font-mono text-sm hover:border-primary-500/50 hover:text-primary-500 transition-colors">
+                                {broker}
                             </div>
                         {/each}
                     </div>
                 </div>
-                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                    Connect seamlessly with your existing providers and file systems. Enhance your workflows by interacting with internal & external data sources.
+                <p class="text-xs text-gray-400 leading-relaxed mt-auto">
+                    Direct connections to Coinbase, Kraken, Fidelity, Robinhood, Schwab, and JPMorgan Chase via Snaptrade. Read-only access with bank-level encryption.
                 </p>
             </div>
 
-            <!-- Prompt Library -->
-            <div class="bg-gray-50 p-8 rounded-lg flex flex-col h-full">
-                <h3 class="text-lg font-serif text-gray-900 mb-8">Prompt Library</h3>
+            <!-- Real-Time Monitoring -->
+            <div class="bg-gray-950 border border-gray-800 p-8 rounded-lg flex flex-col h-full hover:border-primary-500/50 transition-colors">
+                <div class="mb-4">
+                    <Activity size={24} class="text-primary-500" />
+                </div>
+                <h3 class="text-lg font-bold text-white mb-4">Real-Time Monitoring</h3>
                 <div class="flex-1 flex items-center justify-center mb-8">
-                    <div class="bg-white p-4 rounded shadow-sm w-full max-w-[200px] space-y-2">
-                        <div class="h-2 bg-gray-100 rounded w-1/3 mb-4"></div>
-                        {#each [1, 2, 3, 4, 5] as i}
-                            <div class="flex items-center gap-2">
-                                <div class="h-2 w-2 rounded-full bg-gray-200"></div>
-                                <div class="h-1.5 bg-gray-100 rounded w-3/4"></div>
+                    <div class="bg-gray-900 border border-gray-800 p-4 rounded w-full max-w-[200px] space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-mono">NVDA</span>
+                            <span class="text-xs text-primary-400 font-mono">+4.2%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-mono">TSLA</span>
+                            <span class="text-xs text-red-400 font-mono">-2.1%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-mono">AAPL</span>
+                            <span class="text-xs text-primary-400 font-mono">+1.8%</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mt-auto">
+                    Live price updates with flash effects on changes. Portfolio monitoring with real-time P&L calculations and buying power tracking.
+                </p>
+            </div>
+
+            <!-- AI Copilot -->
+            <div class="bg-gray-950 border border-gray-800 p-8 rounded-lg flex flex-col h-full hover:border-primary-500/50 transition-colors">
+                <div class="mb-4">
+                    <MessageSquare size={24} class="text-primary-500" />
+                </div>
+                <h3 class="text-lg font-bold text-white mb-4">AI Copilot</h3>
+                <div class="flex-1 flex items-center justify-center mb-8">
+                    <div class="bg-gray-900 border border-gray-800 p-4 rounded w-full max-w-[200px] space-y-2">
+                        <div class="text-[10px] text-gray-500 font-mono">$ thesis analyze</div>
+                        <div class="text-[9px] text-primary-400 leading-relaxed">
+                            Your NVDA position is up 4.2%. IV rank at 67th percentile suggests covered call opportunity...
+                        </div>
+                        <div class="flex items-center gap-1 mt-2">
+                            <span class="text-[10px] text-gray-500 font-mono">$</span>
+                            <span class="animate-pulse text-primary-500">▊</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mt-auto">
+                    Natural language interface for portfolio queries. Ask about positions, get strategy recommendations, analyze options Greeks, and receive actionable insights.
+                </p>
+            </div>
+
+            <!-- Options Analysis -->
+            <div class="bg-gray-950 border border-gray-800 p-8 rounded-lg flex flex-col h-full hover:border-primary-500/50 transition-colors">
+                <div class="mb-4">
+                    <TrendingUp size={24} class="text-primary-500" />
+                </div>
+                <h3 class="text-lg font-bold text-white mb-4">Options Intelligence</h3>
+                <div class="flex-1 flex items-center justify-center mb-8">
+                    <div class="bg-gray-900 border border-gray-800 p-4 rounded w-full max-w-[200px] space-y-2">
+                        <div class="text-[10px] text-gray-400">AAPL $145 Call</div>
+                        <div class="space-y-1 text-[9px]">
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">IV Rank:</span>
+                                <span class="text-primary-400">67%</span>
                             </div>
-                        {/each}
-                    </div>
-                </div>
-                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                    Choose from our library of professionally written prompts aimed at automating your common workflows end-to-end.
-                </p>
-            </div>
-
-            <!-- Guided Implementation -->
-            <div class="bg-gray-50 p-8 rounded-lg flex flex-col h-full">
-                <h3 class="text-lg font-serif text-gray-900 mb-8">Guided Implementation</h3>
-                <div class="flex-1 flex items-center justify-center mb-8">
-                    <div class="flex -space-x-2">
-                        <div class="h-10 w-10 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-blue-600 text-xs">A</div>
-                        <div class="h-10 w-10 rounded-full bg-green-100 border-2 border-white flex items-center justify-center text-green-600 text-xs">B</div>
-                        <div class="h-10 w-10 rounded-full bg-purple-100 border-2 border-white flex items-center justify-center text-purple-600 text-xs">C</div>
-                    </div>
-                </div>
-                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                    White-glove engagement and implementation with our team of ex-bankers and private equity investors.
-                </p>
-            </div>
-
-            <!-- Custom-Trained Models -->
-            <div class="bg-gray-50 p-8 rounded-lg flex flex-col h-full">
-                <h3 class="text-lg font-serif text-gray-900 mb-8">Custom-Trained Models</h3>
-                <div class="flex-1 flex items-center justify-center mb-8">
-                    <div class="relative">
-                        <!-- Tree structure visualization -->
-                        <div class="flex justify-center gap-4 mb-4">
-                            <div class="h-6 w-6 border border-gray-300 bg-white rounded-sm"></div>
-                            <div class="h-6 w-6 border border-gray-300 bg-white rounded-sm"></div>
-                            <div class="h-6 w-6 border border-gray-300 bg-white rounded-sm"></div>
-                        </div>
-                        <div class="flex justify-center mb-4">
-                            <div class="h-8 w-px bg-gray-300"></div>
-                        </div>
-                        <div class="flex justify-center">
-                            <div class="h-8 w-8 bg-[#0B231E] rounded flex items-center justify-center text-white text-xs">AI</div>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                    Custom-trained LLMs built for finance, using professionally labeled data tailored to the workflows and precision standards of investment banking.
-                </p>
-            </div>
-
-            <!-- Governance & Permissions -->
-            <div class="bg-gray-50 p-8 rounded-lg flex flex-col h-full">
-                <h3 class="text-lg font-serif text-gray-900 mb-8">Governance & Permissions</h3>
-                <div class="flex-1 flex items-center justify-center mb-8">
-                    <div class="bg-white p-4 rounded shadow-sm w-full max-w-[200px]">
-                        <div class="flex justify-between mb-4">
-                            <div class="text-[10px] font-bold">122</div>
-                            <div class="text-[10px] font-bold">2.14</div>
-                        </div>
-                        <div class="space-y-2">
-                            <div class="h-px bg-gray-100 w-full"></div>
-                            <div class="h-1.5 bg-gray-100 rounded w-1/2"></div>
-                            <div class="h-1.5 bg-gray-100 rounded w-3/4"></div>
-                            <div class="h-1.5 bg-gray-100 rounded w-2/3"></div>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                    Granular permission controls, role-based access management, comprehensive audit trails, and customizable governance policies to streamline compliance and safeguard your data.
-                </p>
-            </div>
-
-            <!-- Single Tenant Deployment -->
-            <div class="bg-gray-50 p-8 rounded-lg flex flex-col h-full">
-                <h3 class="text-lg font-serif text-gray-900 mb-8">Single Tenant Deployment</h3>
-                <div class="flex-1 flex items-center justify-center mb-8">
-                    <div class="grid grid-cols-3 gap-1">
-                        {#each [1, 2, 3, 4, 5, 6, 7, 8, 9] as i}
-                            <div class={`h-8 w-8 border border-gray-200 ${i === 5 ? 'bg-[#0B231E] flex items-center justify-center' : 'bg-white'}`}>
-                                {#if i === 5}
-                                    <div class="h-2 w-2 bg-white rounded-full"></div>
-                                {/if}
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Theta:</span>
+                                <span class="text-gray-400">-$0.12</span>
                             </div>
-                        {/each}
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Delta:</span>
+                                <span class="text-gray-400">0.68</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                    Flexible deployment options to meet your security and infrastructure needs.
+                <p class="text-xs text-gray-400 leading-relaxed mt-auto">
+                    Track IV rank and percentile, expected moves, Greeks analysis, strike optimization, and theta decay vs gamma risk balancing.
+                </p>
+            </div>
+
+            <!-- Proactive Alerts -->
+            <div class="bg-gray-950 border border-gray-800 p-8 rounded-lg flex flex-col h-full hover:border-primary-500/50 transition-colors">
+                <div class="mb-4">
+                    <Bell size={24} class="text-primary-500" />
+                </div>
+                <h3 class="text-lg font-bold text-white mb-4">Proactive Alerts</h3>
+                <div class="flex-1 flex items-center justify-center mb-8">
+                    <div class="bg-gray-900 border border-yellow-500/20 p-4 rounded w-full max-w-[200px] space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-yellow-400 text-xs">⚠</span>
+                            <span class="text-[10px] text-yellow-400 font-mono">ALERT</span>
+                        </div>
+                        <div class="text-[9px] text-gray-300">
+                            TSLA calls expire in 3 days. Consider rolling or closing position.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mt-auto">
+                    Unusual volatility detection, expiring options reminders, cost basis alerts, and opportunity identification that doesn't wait to be asked.
+                </p>
+            </div>
+
+            <!-- Signal Feed -->
+            <div class="bg-gray-950 border border-gray-800 p-8 rounded-lg flex flex-col h-full hover:border-primary-500/50 transition-colors">
+                <div class="mb-4">
+                    <BarChart3 size={24} class="text-primary-500" />
+                </div>
+                <h3 class="text-lg font-bold text-white mb-4">Signal Feed</h3>
+                <div class="flex-1 flex items-center justify-center mb-8">
+                    <div class="bg-gray-900 border border-gray-800 p-4 rounded w-full max-w-[200px] space-y-2">
+                        <div class="flex items-center gap-2 text-[9px]">
+                            <div class="h-1.5 w-1.5 rounded-full bg-primary-500"></div>
+                            <span class="text-gray-400">Bloomberg: NVDA earnings beat</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-[9px]">
+                            <div class="h-1.5 w-1.5 rounded-full bg-primary-500"></div>
+                            <span class="text-gray-400">Unusual Whales: $2M call sweep</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-[9px]">
+                            <div class="h-1.5 w-1.5 rounded-full bg-primary-500"></div>
+                            <span class="text-gray-400">Reuters: Fed rate decision</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mt-auto">
+                    Aggregated signals from Bloomberg, MarketWatch, Reuters, Unusual Whales, Whale Alert, and social media filtered for your portfolio.
                 </p>
             </div>
         </div>
